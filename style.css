@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    /* background-size: cover; */
+}
+h1{
+    font-size: 148px;
+    transition: color 0.5s ease-in;
+}
+h2{
+    font-size: calc(148px / 3);
+}
+p{
+    font-size: calc(148px / 6);
+    padding: .2rem;
+}
+h1:hover{
+    color: #d81b60;
+}
+#info{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+}
+#ticket{
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    transform: rotate(-45deg);
+}
+#buttons{
+    margin: 1.3rem;
+}
+button{
+    margin: 10px;
+    outline: none;
+    width: 180px;
+    height: 50px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: calc( 148px / 8 );
+    background: none;
+    border-radius: 0;
+    border: none;
+    top: 0;
+    color: #fff;
+    transition: top 0.1s, box-shadow 0.1s, color 0.5s font-weight 0.3s;
+    box-shadow: 0 0 #fff;
+}
+button:hover{
+    cursor: pointer;
+    color: #d81b60;
+    top: -30px;
+    transition: top 0.5s, box-shadow 0.5s;
+    box-shadow: 0 5px #fff;
+    font-weight: 700;
+}
+#ticket{
+    transform: rotate(50deg);
+    width: 30px;
+    height: 30px;
+    fill: #d81b60;
+}
+#waypoint{
+    width: 30px;
+    height: 30px;
+    fill: #d81b60;
+}
+#audioControls{
+    align-self: flex-end;
+    padding: 20px;
+    fill: #d81b60;
+    width: 50px;
+    height: 50px;
+}
+#playBtn, #pauseBtn{
+    transition: fill 0.5s;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+}
+#pauseBtn{
+    display: none;
+}
+#playBtn:hover, #pauseBtn:hover{
+    fill: #fff;
+    cursor: pointer;
+}
+@media screen and (min-width: 446px) {
+    button{
+        margin: 0;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 445px) {
+    #buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* margin: 5px; */
+        padding: 5px;
+
+    }
+    button{
+        margin: 5px;
+        padding: 0;
+    }
+}
